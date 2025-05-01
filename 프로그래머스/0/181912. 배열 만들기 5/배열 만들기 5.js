@@ -1,10 +1,4 @@
 function solution(intStrs, k, s, l) {
-    let answer = [];
-    for(const v of intStrs) {
-        const num = Number(v.slice(s, s+l));
-        if(num > k) {
-            answer.push(num);   
-        }
-    }
-    return answer;
+    return intStrs.map((v) => +v.slice(s,s+l)).filter((v) => v > k);
+    // 여기서 +는 Number()와 동일
 }
